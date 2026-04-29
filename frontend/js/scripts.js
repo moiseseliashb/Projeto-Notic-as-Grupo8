@@ -88,6 +88,22 @@ function addFavoriteFromButton(btn) {
 document.addEventListener("DOMContentLoaded", () => {
   updateFavoritesCount();
 
+  // Toggle "mostrar/ocultar senha"
+  document.querySelectorAll("[data-eye-toggle]").forEach((btn) => {
+    const inputId = btn.getAttribute("data-eye-toggle");
+    const input = inputId ? document.getElementById(inputId) : null;
+    if (!input) return;
+
+    btn.addEventListener("click", () => {
+      const isPassword = input.type === "password";
+      input.type = isPassword ? "text" : "password";
+      btn.setAttribute(
+        "aria-label",
+        isPassword ? "Ocultar senha" : "Mostrar senha"
+      );
+    });
+  });
+
   const favoritesContainer = document.getElementById("favorites-list");
   if (favoritesContainer) {
     renderFavorites(favoritesContainer);

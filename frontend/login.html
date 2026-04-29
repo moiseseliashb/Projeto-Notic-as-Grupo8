@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vem ouvi - Entrar</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <script defer src="js/scripts.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Vem ouvi - Inicio">
+          <div class="brand-mark" aria-hidden="true">VO</div>
+          <div class="brand-name">Vem ouvi</div>
+        </a>
+
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu">
+          Menu
+        </button>
+
+        <nav class="nav" id="nav-menu" aria-label="Navegacao principal">
+          <a class="nav-link" href="index.html">Inicio</a>
+          <a class="nav-link" href="favorites.html">
+            Favoritos <span class="badge" id="favorites-count">0</span>
+          </a>
+          <a class="nav-link" href="login.html">Entrar</a>
+          <a class="nav-link" href="register.html">Criar conta</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="panel auth-wrap" aria-label="Formulario de login">
+        <div>
+          <h1 class="hero-title" style="font-size:30px; margin-top:0;">Bem-vindo de volta</h1>
+          <p class="hero-sub">
+            Faca login para acessar seus favoritos sincronizados (quando o backend estiver pronto).
+          </p>
+          <div class="pill-row" aria-label="Destaques">
+            <span class="pill">Seguro</span>
+            <span class="pill">Rapido</span>
+            <span class="pill">Pronto para integracao</span>
+          </div>
+        </div>
+
+        <div>
+          <form class="form" method="POST" action="/login">
+            <div class="field">
+              <label for="username">Usuario ou email</label>
+              <input
+                class="input"
+                id="username"
+                name="username"
+                autocomplete="username"
+                placeholder="Digite seu usuario ou email"
+                required
+              />
+            </div>
+
+            <div class="field">
+              <label for="password">Senha</label>
+              <input
+                class="input"
+                id="password"
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                placeholder="Digite sua senha"
+                required
+              />
+            </div>
+
+            <button class="btn btn-primary" type="submit">Entrar</button>
+
+              <div class="help">
+              Nao tem conta?
+              <a href="register.html" style="color: var(--text); font-weight: 900;">Criar conta</a>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <div>Copyright <span id="year"></span> Vem ouvi</div>
+        <div style="text-align:right;">Projeto Web - Grupo 8</div>
+      </div>
+    </footer>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
+

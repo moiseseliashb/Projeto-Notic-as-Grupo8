@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vem ouvi - Inicio</title>
+    <script defer src="js/scripts.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Vem ouvi - Inicio">
+          <div class="brand-mark" aria-hidden="true">VO</div>
+          <div class="brand-name">Vem ouvi</div>
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-label="Abrir menu"
+        >
+          Menu
+        </button>
+
+        <nav class="nav" id="nav-menu" aria-label="Navegacao principal">
+          <a class="nav-link" href="index.html">Inicio</a>
+          <a class="nav-link" href="favorites.html">
+            Favoritos <span class="badge" id="favorites-count">0</span>
+          </a>
+          <a class="nav-link" href="login.html">Entrar</a>
+          <a class="nav-link" href="register.html">Criar conta</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div class="panel">
+          <h1 class="hero-title">Noticias em que da gosto ouvir.</h1>
+          <p class="hero-sub">
+            Pesquise temas, encontre resumos e salve o que voce quer rever
+            depois. (Nesta versao, os favoritos sao salvos no seu navegador.)
+          </p>
+          <div class="pill-row" aria-label="Destaques">
+            <span class="pill">Resumo rapido</span>
+            <span class="pill">Salvar favoritos</span>
+            <span class="pill">Interface moderna</span>
+          </div>
+
+          <h2 class="section-title">Sugestoes</h2>
+          <div class="grid" role="list" aria-label="Cartoes de noticias">
+            <article class="card" role="listitem">
+              <h3>Economia em foco</h3>
+              <p>
+                Um resumo curto sobre o que esta a mexer com o custo de vida.
+              </p>
+              <div class="meta">
+                <span class="chip">Fonte: Agencia</span>
+                <span class="chip">Atualizado hoje</span>
+              </div>
+              <div class="card-actions">
+                <button
+                  class="btn btn-primary save-fav"
+                  type="button"
+                  data-title="Economia em foco"
+                  data-summary="Um resumo curto sobre o que esta a mexer com o custo de vida."
+                  data-url="#"
+                >
+                  Salvar
+                </button>
+              </div>
+            </article>
+
+            <article class="card" role="listitem">
+              <h3>Tecnologia no dia a dia</h3>
+              <p>Novidades e dicas praticas para acompanhar o que importa.</p>
+              <div class="meta">
+                <span class="chip">Fonte: TechNews</span>
+                <span class="chip">Atualizado ontem</span>
+              </div>
+              <div class="card-actions">
+                <button
+                  class="btn btn-primary save-fav"
+                  type="button"
+                  data-title="Tecnologia no dia a dia"
+                  data-summary="Novidades e dicas praticas para acompanhar o que importa."
+                  data-url="#"
+                >
+                  Salvar
+                </button>
+              </div>
+            </article>
+
+            <article class="card" role="listitem">
+              <h3>Saude e bem-estar</h3>
+              <p>Conselhos simples para cuidar da mente e do corpo.</p>
+              <div class="meta">
+                <span class="chip">Fonte: Saude+</span>
+                <span class="chip">Atualizado esta semana</span>
+              </div>
+              <div class="card-actions">
+                <button
+                  class="btn btn-primary save-fav"
+                  type="button"
+                  data-title="Saude e bem-estar"
+                  data-summary="Conselhos simples para cuidar da mente e do corpo."
+                  data-url="#"
+                >
+                  Salvar
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <aside class="panel search-card">
+          <div>
+            <div class="search-label">Buscar por tema</div>
+            <p class="help" style="margin: 6px 0 0">
+              Aqui e so visual. Quando voce ligar o backend, a busca pode
+              retornar resultados reais.
+            </p>
+          </div>
+
+          <form class="search-bar" onsubmit="return false;">
+            <input
+              class="input"
+              id="q"
+              name="q"
+              placeholder="Ex: educacao, politica, tecnologia..."
+            />
+            <button class="btn btn-primary" type="submit">Buscar</button>
+          </form>
+
+          <div class="divider"></div>
+
+          <div>
+            <div class="search-label">Como funciona</div>
+            <p class="help" style="margin: 6px 0 0">
+              1) Pesquise um tema. 2) Escolha uma noticia. 3) Clique em
+              "Salvar". Depois, veja em
+              <a
+                href="favorites.html"
+                style="color: var(--text); font-weight: 800"
+                >Favoritos</a
+              >.
+            </p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <div>Copyright <span id="year"></span> Vem ouvi</div>
+        <div style="text-align: right">Projeto Web - Grupo 8</div>
+      </div>
+    </footer>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

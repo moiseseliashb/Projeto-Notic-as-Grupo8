@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Vem ouvi - Inicio</title>
-    <link rel="stylesheet" href="styles/style.css" />
+
     <script defer src="js/scripts.js"></script>
   </head>
   <body>
@@ -15,7 +15,12 @@
           <div class="brand-name">Vem ouvi</div>
         </a>
 
-        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Abrir menu">
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-label="Abrir menu"
+        >
           Menu
         </button>
 
@@ -35,8 +40,8 @@
         <div class="panel">
           <h1 class="hero-title">Noticias em que da gosto ouvir.</h1>
           <p class="hero-sub">
-            Pesquise temas, encontre resumos e salve o que voce quer rever depois. (Nesta versao,
-            os favoritos sao salvos no seu navegador.)
+            Pesquise temas, encontre resumos e salve o que voce quer rever
+            depois. (Nesta versao, os favoritos sao salvos no seu navegador.)
           </p>
           <div class="pill-row" aria-label="Destaques">
             <span class="pill">Resumo rapido</span>
@@ -48,7 +53,9 @@
           <div class="grid" role="list" aria-label="Cartoes de noticias">
             <article class="card" role="listitem">
               <h3>Economia em foco</h3>
-              <p>Um resumo curto sobre o que esta a mexer com o custo de vida.</p>
+              <p>
+                Um resumo curto sobre o que esta a mexer com o custo de vida.
+              </p>
               <div class="meta">
                 <span class="chip">Fonte: Agencia</span>
                 <span class="chip">Atualizado hoje</span>
@@ -111,13 +118,19 @@
         <aside class="panel search-card">
           <div>
             <div class="search-label">Buscar por tema</div>
-            <p class="help" style="margin:6px 0 0;">
-              Aqui e so visual. Quando voce ligar o backend, a busca pode retornar resultados reais.
+            <p class="help" style="margin: 6px 0 0">
+              Aqui e so visual. Quando voce ligar o backend, a busca pode
+              retornar resultados reais.
             </p>
           </div>
 
           <form class="search-bar" onsubmit="return false;">
-            <input class="input" id="q" name="q" placeholder="Ex: educacao, politica, tecnologia..." />
+            <input
+              class="input"
+              id="q"
+              name="q"
+              placeholder="Ex: educacao, politica, tecnologia..."
+            />
             <button class="btn btn-primary" type="submit">Buscar</button>
           </form>
 
@@ -125,9 +138,14 @@
 
           <div>
             <div class="search-label">Como funciona</div>
-            <p class="help" style="margin:6px 0 0;">
-              1) Pesquise um tema. 2) Escolha uma noticia. 3) Clique em "Salvar". Depois, veja em
-              <a href="favorites.html" style="color: var(--text); font-weight: 800;">Favoritos</a>.
+            <p class="help" style="margin: 6px 0 0">
+              1) Pesquise um tema. 2) Escolha uma noticia. 3) Clique em
+              "Salvar". Depois, veja em
+              <a
+                href="favorites.html"
+                style="color: var(--text); font-weight: 800"
+                >Favoritos</a
+              >.
             </p>
           </div>
         </aside>
@@ -137,7 +155,7 @@
     <footer>
       <div class="container footer-inner">
         <div>Copyright <span id="year"></span> Vem ouvi</div>
-        <div style="text-align:right;">Projeto Web - Grupo 8</div>
+        <div style="text-align: right">Projeto Web - Grupo 8</div>
       </div>
     </footer>
     <script>
@@ -145,4 +163,3 @@
     </script>
   </body>
 </html>
-

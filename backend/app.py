@@ -8,7 +8,7 @@ app.secret_key = "segredo_do_ipil_2026" # Chave para as sessões [cite: 85]
 
 # O Chefe chama os seus ajudantes 
 app.register_blueprint(auth_bp)
-app.register_blueprint(pref_bp)
+""" app.register_blueprint(pref_bp) """
 
 @app.route('/')
 def pagina_principal():
